@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,7 +13,16 @@
   color: white;
 }
 
+.BodyDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .Add-List {
+  min-width: 50vw;
+  max-width: 50vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,6 +48,10 @@
   margin-bottom: 2px;
 }
 
+input:focus {
+  outline: none;
+}
+
 .Button {
   min-width: 40px;
   max-width: 40px;
@@ -67,18 +69,34 @@ Button:hover {
   background-color: #456dad;
 }
 
-.Result {
-  margin-top: 16px;
-  color: white;
+.ResultDiv {
+  min-width: 50vw;
+  max-width: 50vw;
   display: flex;
-  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Result {
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.ResultHeader {
+  min-width: 25vw;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.ResultList {
+  color: white;
+  display: flex;
+  font-size: calc(5px + 2vmin);
+}
+
+.ResultBox {
+  min-width: 25vw;
+  text-align: left;
 }
