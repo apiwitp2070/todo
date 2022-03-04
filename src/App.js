@@ -1,7 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    document.title = "To-Do List"
+  }, []);
 
   let [tlist, setTList] = useState([]);
   let [tdate, setTDate] = useState([]);
